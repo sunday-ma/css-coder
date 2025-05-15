@@ -1,4 +1,7 @@
-# css-coder README
+<h1 align="left">
+    <img src="https://github.com/sunday-ma/css-coder/raw/main/images/logo.png" width="32" height="32" alt="Using CSS Coder" />
+    CSS Coder - VSCode Extension
+</h1>
 
 ## 功能说明
 

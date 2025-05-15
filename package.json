@@ -5,6 +5,14 @@
   "version": "0.0.1",
   "icon": "images/logo.png",
   "publisher": "guihe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunday-ma/css-coder.git"
+  },
+  "homepage": "https://github.com/sunday-ma/css-coder",
+  "bugs": {
+    "url": "https://github.com/sunday-ma/css-coder/issues"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
