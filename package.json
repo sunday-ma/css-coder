@@ -1,0 +1,72 @@
+{
+  "name": "css-coder",
+  "displayName": "CSS Coder",
+  "description": "A VS Code extension to format and pack CSS code.",
+  "version": "0.0.1",
+  "icon": "images/logo.png",
+  "publisher": "guihe",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:css"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == css",
+          "command": "cssCoder.format",
+          "group": "cssCoder@1"
+        },
+        {
+          "when": "resourceLangId == css",
+          "command": "cssCoder.pack",
+          "group": "cssCoder@2"
+        },
+        {
+          "when": "resourceLangId == css",
+          "command": "cssCoder.packAdv",
+          "group": "cssCoder@3"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "cssCoder.format",
+        "title": "CSS Coder: Format"
+      },
+      {
+        "command": "cssCoder.packAdv",
+        "title": "CSS Coder: Pack Advanced"
+      },
+      {
+        "command": "cssCoder.pack",
+        "title": "CSS Coder: Pack"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
